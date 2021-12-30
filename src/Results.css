@@ -1,0 +1,17 @@
+.examples {
+  color: grey;
+  font-style: italic;
+}
+
+.phonetic {
+  font-style: italic;
+}
+
+.section {
+  border: solid black 0.5px;
+  margin: 0 auto;
+  padding: 2vh 2vw;
+  display: block;
+  max-width: 50%;
+  margin-top: 2vh;
+}
