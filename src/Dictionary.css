@@ -2,3 +2,23 @@ form {
   max-width: 100%;
   text-align: center;
 }
+.searchInput {
+  max-width: 100%;
+  background-color: #faf3f3;
+  border: none;
+  padding: 2vh 3vw;
+  border-bottom: 0.1vw solid black;
+  outline: none;
+  font-size: 1vw;
+}
+
+.submitInput {
+  outline: none;
+  border: none;
+  background-color: #faf3f3;
+  width: 3vw;
+}
+
+.submitInput:hover {
+  cursor: pointer;
+}

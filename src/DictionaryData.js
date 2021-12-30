@@ -8,12 +8,13 @@ export default function DictionaryData(props) {
     return (
       <div className="DictionaryData">
         <div className="section">
-          <span className="searchedWord">
-            <h2>{props.data.word}</h2>
-          </span>
-          <span className="phonetic">
-            <h3>[{props.data.phonetic}]</h3>
-          </span>
+          <h2>
+            <span className="searchedWord">{props.data.word}</span>
+            <br />
+            <small>
+              <span className="phonetic">[ {props.data.phonetic}]</span>
+            </small>
+          </h2>
         </div>
         {props.data.meanings.map(function (meanings, index) {
           return (

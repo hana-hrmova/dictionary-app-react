@@ -15,7 +15,7 @@ function App() {
           {" "}
           Hana Hrmová
         </a>
-        ,is open-sourced on{" "}
+        , is open-sourced on{" "}
         <a
           href="https://github.com/hana-hrmova/dictionary-app-react"
           target="_blank"

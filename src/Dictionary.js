@@ -23,10 +23,17 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <h1>Dictionary App</h1>
       <form onSubmit={handleSubmit}>
-        <input type="search" autoFocus={true} onChange={handleChange} />
-        <input type="submit" value="Enter" />
+        <input
+          type="search"
+          placeholder="Type a word"
+          autoFocus={true}
+          onChange={handleChange}
+          className="searchInput"
+        />
+        <button type="submit" value="Enter" className="submitInput">
+          🔎
+        </button>
       </form>
       <DictionaryData data={result} />
     </div>

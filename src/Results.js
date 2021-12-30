@@ -6,13 +6,13 @@ export default function Results(props) {
     <div className="Resullts">
       <div className="section">
         <span className="partOfSpeech">
-          <h2>{props.meanings.partOfSpeech}</h2>
+          <h3>{props.meanings.partOfSpeech}</h3>
         </span>
 
         {props.meanings.definitions.map(function (definitions, index) {
           return (
             <div className="dataResults" key={index}>
-              <span className="definitionsOfWords">
+              <span className="definitions">
                 {" "}
                 <li> {definitions.definition}</li>
               </span>
