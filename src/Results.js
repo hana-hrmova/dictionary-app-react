@@ -1,5 +1,6 @@
 import React from "react";
 import "./Results.css";
+import Synonyms from "./Synonyms";
 
 export default function Results(props) {
   return (
@@ -18,13 +19,7 @@ export default function Results(props) {
               </span>
               <br />
               <span className="examples">{definitions.example}</span>
-              {definitions.synonyms.map(function (synonyms, index) {
-                return (
-                  <div className="synonyms" key={index}>
-                    {null}
-                  </div>
-                );
-              })}
+              <Synonyms synonyms={definitions.synonyms} />
             </div>
           );
         })}
