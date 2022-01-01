@@ -1,6 +1,7 @@
 import React from "react";
 import "./Results.css";
 import Results from "./Results";
+import Phonetics from "./Phonetics";
 
 export default function DictionaryData(props) {
   console.log(props.data);
@@ -10,11 +11,8 @@ export default function DictionaryData(props) {
         <div className="section">
           <h2>
             <span className="searchedWord">{props.data.word}</span>
-            <br />
-            <small>
-              <span className="phonetic">[ {props.data.phonetic}]</span>
-            </small>
           </h2>
+          <Phonetics phonetics={props.data.phonetics[0]} />
         </div>
         {props.data.meanings.map(function (meanings, index) {
           return (

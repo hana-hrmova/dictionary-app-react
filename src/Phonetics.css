@@ -1,0 +1,9 @@
+.audioButton {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.phoneticsWord {
+  font-size: 1.4vw;
+}
