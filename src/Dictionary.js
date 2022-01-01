@@ -6,7 +6,7 @@ import DictionaryData from "./DictionaryData";
 import Photos from "./Photos";
 
 export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState(null);
   const [result, setResult] = useState(null);
   const [photos, setPhotos] = useState(null);
   function handleChange(event) {
@@ -22,16 +22,17 @@ export default function Dictionary() {
     setPhotos(response);
   }
   function search() {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(apiUrl).then(handleResponse);
+
     let pexelsKey = "563492ad6f917000010000018b0d814bee984cf196fdad439afe3474";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsKey}` };
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelResponse);
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePhotos);
   }
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
   }
 
   return (
