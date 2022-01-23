@@ -4,7 +4,7 @@ form {
 }
 .searchInput {
   max-width: 100%;
-  background-color: #faf3f3;
+  background-color: #f3e6ed;
   border: none;
   padding: 2vh 3vw;
   border-bottom: 0.1vw solid black;
@@ -16,7 +16,7 @@ form {
 .submitInput {
   outline: none;
   border: none;
-  background-color: #faf3f3;
+  background-color: #f3e6ed;
   width: 3vw;
 }
 

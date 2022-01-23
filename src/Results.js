@@ -19,6 +19,7 @@ export default function Results(props) {
               </span>
               <br />
               <span className="examples">{definitions.example}</span>
+              <br />
               <Synonyms synonyms={definitions.synonyms} />
             </div>
           );
