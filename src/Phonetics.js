@@ -4,7 +4,7 @@ import useSound from "use-sound";
 export default function Phonetics(props) {
   const [play] = useSound(props.phonetics.audio);
 
-  if (props.phonetics) {
+  if (props.phonetics.text && props.phonetics.audio) {
     return (
       <div className="Phonetics">
         <button className="audioButton" onClick={() => play()}>
