@@ -6,9 +6,10 @@ import DictionaryData from "./DictionaryData";
 import Photos from "./Photos";
 
 export default function Dictionary() {
-  const [keyword, setKeyword] = useState(null);
+  const [keyword, setKeyword] = useState("poetry");
   const [result, setResult] = useState(null);
-  const [photos, setPhotos] = useState(null);
+  const [loaded, setLoaded] = useState(null);
+  const [photos, setPhotos] = useState(false);
   function handleChange(event) {
     event.preventDefault();
     setKeyword(event.target.value);
@@ -34,23 +35,31 @@ export default function Dictionary() {
     event.preventDefault();
     search();
   }
-
-  return (
-    <div className="Dictionary">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Type a word"
-          autoFocus={true}
-          onChange={handleChange}
-          className="searchInput"
-        />
-        <button type="submit" value="Enter" className="submitInput">
-          🔎
-        </button>
-      </form>
-      <DictionaryData data={result} />
-      <Photos photos={photos} />
-    </div>
-  );
+  function load() {
+    setLoaded(true);
+    search();
+  }
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Type a word"
+            autoFocus={true}
+            onChange={handleChange}
+            className="searchInput"
+          />
+          <button type="submit" value="Enter" className="submitInput">
+            🔎
+          </button>
+          <p>suggested words: family, hope, faith </p>
+        </form>
+        <DictionaryData data={result} />
+        <Photos photos={photos} />
+      </div>
+    );
+  } else {
+    load();
+  }
 }
