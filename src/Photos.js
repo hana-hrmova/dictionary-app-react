@@ -3,7 +3,7 @@ import "./Results.css";
 import "./Photos.css";
 
 export default function Photos(props) {
-  if (props.photos.data.photos) {
+  if (props.photos) {
     return (
       <div className=" section Photos">
         <div className="row">
