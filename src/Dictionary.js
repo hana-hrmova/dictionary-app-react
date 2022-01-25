@@ -9,7 +9,7 @@ export default function Dictionary() {
   const [keyword, setKeyword] = useState("poetry");
   const [result, setResult] = useState(null);
   const [loaded, setLoaded] = useState(null);
-  const [photos, setPhotos] = useState(false);
+  const [photos, setPhotos] = useState(null);
   const [language, setLanguage] = useState("en_GB");
   const [placeholder, setPlaceholder] = useState("Type a word...");
   const [suggestions, setSuggestions] = useState(
@@ -64,7 +64,13 @@ export default function Dictionary() {
     let pexelsKey = "563492ad6f917000010000012ea4fd9b2fe24fc9a3c32b44a6a673bc";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsKey}` };
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePhotos);
+
+    axios
+      .get(pexelsApiUrl, { headers: headers })
+      .then(handlePhotos)
+      .catch(() => {
+        setPhotos(null);
+      });
   }
   function handleSubmit(event) {
     event.preventDefault();
