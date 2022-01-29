@@ -64,13 +64,7 @@ export default function Dictionary() {
     let pexelsKey = "563492ad6f917000010000012ea4fd9b2fe24fc9a3c32b44a6a673bc";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     let headers = { Authorization: `Bearer ${pexelsKey}` };
-
-    axios
-      .get(pexelsApiUrl, { headers: headers })
-      .then(handlePhotos)
-      .catch(() => {
-        setPhotos(null);
-      });
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePhotos);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -91,9 +85,15 @@ export default function Dictionary() {
             onChange={handleChange}
             className="searchInput"
           />
-          <button type="submit" value="Enter" className="submitInput">
+          <button
+            type="submit"
+            value="Enter"
+            className="submitInput"
+            id="submit-input"
+          >
             🔎
           </button>
+
           <p>{suggestions} </p>
           <input
             type="button"
