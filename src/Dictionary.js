@@ -85,7 +85,7 @@ export default function Dictionary() {
             onChange={handleChange}
             className="searchInput"
           />
-          <p>{suggestions} </p>
+          <p className="suggestions">{suggestions} </p>
           <br />
           <button
             type="submit"

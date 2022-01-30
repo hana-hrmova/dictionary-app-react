@@ -31,10 +31,11 @@ form {
 }
 
 .Dictionary p {
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   color: grey;
   margin-top: 0.4vh;
   margin-left: -3vw;
+  margin-bottom: 0.3vh;
 }
 
 .languageButton {
@@ -50,8 +51,4 @@ form {
 
 .languageButton:hover {
   padding: 0.57vh 0.57vw;
-}
-
-p {
-  margin-bottom: 0.3vh;
 }
