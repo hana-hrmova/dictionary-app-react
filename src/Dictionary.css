@@ -17,7 +17,6 @@ form {
   outline: none;
   border: none;
   background-color: #f3e6ed;
-  width: 3vw;
 }
 
 #submit-input {
@@ -44,6 +43,7 @@ form {
   border: solid 0.002vw grey;
   box-shadow: 0 0.2vh 0.2vw rgb(175, 175, 175);
   transition: 200ms ease-in-out;
+  color: black;
 }
 
 .languageButton:hover {
