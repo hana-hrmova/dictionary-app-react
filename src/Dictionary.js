@@ -45,6 +45,14 @@ export default function Dictionary() {
     setSuggestions("empfohlen: Blume, Hoffnung, lieben");
   }
 
+  function languageItalian(event) {
+    event.preventDefault();
+    alert("Cerca parole italiane...");
+    setLanguage("it");
+    setPlaceholder("Digita una parola...");
+    setSuggestions("suggerito: cucina, Chiesa, lucciola");
+  }
+
   function handleChange(event) {
     event.preventDefault();
     setKeyword(event.target.value);
@@ -120,6 +128,12 @@ export default function Dictionary() {
             onClick={languageGerman}
             className="languageButton"
             value=" German"
+          />
+          <input
+            type="button"
+            onClick={languageItalian}
+            className="languageButton"
+            value=" Italian"
           />
         </form>
         <DictionaryData data={result} />
