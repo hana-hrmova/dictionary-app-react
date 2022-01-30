@@ -20,6 +20,7 @@
   background-color: white;
   box-shadow: 0 0.3vh 0.2vw rgb(175, 175, 175);
   transition: 200ms ease-in-out;
+  width: 95%;
 }
 
 .section:hover {

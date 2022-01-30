@@ -1,9 +1,9 @@
 form {
-  max-width: 100%;
+  width: 100%;
   text-align: center;
 }
 .searchInput {
-  max-width: 100%;
+  width: 100%;
   background-color: #f3e6ed;
   border: none;
   padding: 2vh 3vw;
