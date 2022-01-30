@@ -1,6 +1,7 @@
 form {
   width: 70%;
   text-align: center;
+  margin: 0 auto;
 }
 .searchInput {
   width: 100%;

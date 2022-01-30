@@ -85,6 +85,8 @@ export default function Dictionary() {
             onChange={handleChange}
             className="searchInput"
           />
+          <p>{suggestions} </p>
+          <br />
           <button
             type="submit"
             value="Enter"
@@ -94,7 +96,6 @@ export default function Dictionary() {
             🔎
           </button>
 
-          <p>{suggestions} </p>
           <input
             type="button"
             onClick={languageEnglish}
