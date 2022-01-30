@@ -12,6 +12,7 @@ form {
   outline: none;
   font-size: 1vw;
   padding: 0.5vh 0.5vw;
+  text-align: center;
 }
 
 .submitInput {

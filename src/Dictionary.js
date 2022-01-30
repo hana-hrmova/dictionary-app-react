@@ -95,6 +95,7 @@ export default function Dictionary() {
           >
             🔎
           </button>
+          <br />
 
           <input
             type="button"
